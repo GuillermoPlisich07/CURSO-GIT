@@ -1,0 +1,25 @@
+git --version //Esto sirve para ver la version del git en el dispositivo
+
+git help //Para ver la documentacion
+
+git config --global -e
+
+git config --global user.email 'email@prueba.com' //Email de confianza
+
+git config --global user.name 'username'          //Nombre de confianza
+
+git config --global init.defaultBranch main       //Para configurar la rama principal en el global como main
+
+git init    //Inicializar el proyecto local
+
+git status  // Informacion sobre la rama, archivos modificados y archivos que estan listos para el snapshot
+
+git log // 
+
+git add . // Agregar los archivos al statch
+
+git commit -m // Crear registro historico
+
+git chekout -- . // Vuelve al anterior statch
+
+git branch // 
