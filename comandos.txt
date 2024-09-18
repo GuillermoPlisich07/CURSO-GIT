@@ -22,4 +22,7 @@ git commit -m // Crear registro historico
 
 git chekout -- . // Vuelve al anterior statch
 
-git branch // 
+git branch // Para visualizar en la rama que estoy
+
+git branch -m ramaAnterior ramaNueva // Para renombrar la rama
+
