@@ -33,4 +33,6 @@ git branch -m ramaAnterior ramaNueva // Para renombrar la rama
 
 git config --global alias.[nombre del alias] "[comando]" // Crear un comando o alias 
 
-git diff // 
+git diff // Visualizar las diferencia del cambio, o sea lo que estaba por lo que se cambio
+
+
