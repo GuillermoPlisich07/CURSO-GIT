@@ -21,11 +21,16 @@ git log --oneline // Lo mismo pero resumido
 git add . // Agregar los archivos al stage
 
 git reset // deshacer los cambios y volver a una confirmación específica
+git reset --soft HEAD^ // Vuelve al ultimo commit o mas para atras multiplicando el ^X
+git reset --hard // Elimina los cambios
 
 git chekout -- . // Vuelve al anterior stage
 
 git commit -m // Crear registro historico
 git commit -am // Agrega los archivos que ya tienen seguimientos al stage y crear registro historico
+git commit --amend -m // actualizar el commit por si tuvimos algun error al escribir el nombre
+git commit
+ 
 
 git branch // Para visualizar en la rama que estoy
 
