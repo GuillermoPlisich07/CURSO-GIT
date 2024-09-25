@@ -3,12 +3,10 @@ git --version //Esto sirve para ver la version del git en el dispositivo
 git help //Para ver la documentacion
 
 git config --global -e
-
 git config --global user.email 'email@prueba.com' //Email de confianza
-
 git config --global user.name 'username'          //Nombre de confianza
-
 git config --global init.defaultBranch main       //Para configurar la rama principal en el global como main
+git config --global alias.[nombre del alias] "[comando]" // Crear un comando o alias 
 
 git init    //Inicializar el proyecto local
 
@@ -22,22 +20,56 @@ git add . // Agregar los archivos al stage
 
 git reset // deshacer los cambios y volver a una confirmación específica
 git reset --soft HEAD^ // Vuelve al ultimo commit o mas para atras multiplicando el ^X
-git reset --hard // Elimina los cambios
+git reset --soft [hash] // Para movernos a un commit mediante el hash corto que tiene
+git reset --mixed [hash] // Saca todo del stage
+git reset --hard // Elimina los cambios y vuelve al punto anterior
 
-git chekout -- . // Vuelve al anterior stage
+git reflog // Muestra una linea de tiempo de todo lo ocurrido
 
 git commit -m // Crear registro historico
 git commit -am // Agrega los archivos que ya tienen seguimientos al stage y crear registro historico
 git commit --amend -m // actualizar el commit por si tuvimos algun error al escribir el nombre
-git commit
- 
-
-git branch // Para visualizar en la rama que estoy
-
-git branch -m ramaAnterior ramaNueva // Para renombrar la rama
-
-git config --global alias.[nombre del alias] "[comando]" // Crear un comando o alias 
 
 git diff // Visualizar las diferencia del cambio, o sea lo que estaba por lo que se cambio
 
+git mv archivo1 archivo2 // Sirve para eliminar o mover el archivo o carpeta
+
+git rm archivo // Eliminar el archivo
+
+git branch // Para visualizar en la rama que estoy
+git branch -m ramaAnterior ramaNueva // Para renombrar la rama
+git branch [nombre_rama_mueva] // Crear una rama rama nueva 
+git branch -b [nombre_rama_mueva] // Crear la rama nueva y nos vemos a ella
+git branch -d [nombre_rama] // Eliminar la rama
+
+git chekout -- . // Vuelve al anterior stage
+git checkout [nombre_rama] // Nos movemos a la rama que querramos
+
+gi merge [nombre_rama] // Hacemos merge de la rama que nos queremos traer
+
+git tag [nombre_nuevo_tag] // Crear un nuevo tag 
+git tag -a [nombre_nuevo_tag] -m [descripcion] // Crear un nuevo tag con descripcion
+git tag -a [nombre_nuevo_tag] [hash_commit] -m [descripcion] // Asignarle un tag a un commit
+git tag // Visualizar los tags
+git tag -d [nombre_tag] // Eliminar el tag
+
+git show [nombre_tag] // Visualizar la anotacion del tag
+
+git stash // Volcar todo a la bobeda del stash
+git stash "nombre_del_stash"
+git stash [id_stash] // Volcamos el stash seleccionado
+git stash list // Listar los stash que hay
+git stash pop // Vuelve lo que volcamos al stash
+git stash drop [id_stash] // Borramos el stash seleccionado
+
+git rebase [nombre_rama] // Nos traemos los cambios realizados desde otra rama
+git rebase -i HEAD~x // Rebase interactivo
+
+git remote add origin [URL] // Agregar repositorio
+
+git remote -v // Visualizar los repositorios remotos que tenemos
+
+git push -u [repositorio] [rama] // Enviar al repositorio en una rama especifica
+
+git push --tags // Subir los tags que realizamos
 
