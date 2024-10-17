@@ -41,6 +41,7 @@ git branch -m ramaAnterior ramaNueva // Para renombrar la rama
 git branch [nombre_rama_mueva] // Crear una rama rama nueva 
 git branch -b [nombre_rama_mueva] // Crear la rama nueva y nos vemos a ella
 git branch -d [nombre_rama] // Eliminar la rama
+git branch -a // Mostrar todas las ramas
 
 git chekout -- . // Vuelve al anterior stage
 git checkout [nombre_rama] // Nos movemos a la rama que querramos
@@ -65,11 +66,13 @@ git stash drop [id_stash] // Borramos el stash seleccionado
 git rebase [nombre_rama] // Nos traemos los cambios realizados desde otra rama
 git rebase -i HEAD~x // Rebase interactivo
 
-git remote add origin [URL] // Agregar repositorio
-
+git remote add [nombre_origen] [URL] // Agregar repositorio
 git remote -v // Visualizar los repositorios remotos que tenemos
+git remote pruene origin // Actualiza las ramas de origen
 
 git push -u [repositorio] [rama] // Enviar al repositorio en una rama especifica
-
 git push --tags // Subir los tags que realizamos
+
+git fetch 
+
 
