@@ -73,3 +73,5 @@ git push -u [repositorio] [rama] // Enviar al repositorio en una rama especifica
 
 git push --tags // Subir los tags que realizamos
 
+git fetch // Actualizar las referencias de la ramas
+
